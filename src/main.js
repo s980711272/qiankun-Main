@@ -17,6 +17,9 @@ registerMicroApps([
     entry: '//localhost:8081',
     container: '#vueApp',
     activeRule: '/vue',
+    props:{
+      id:'111'
+    }
   },
   {
     name: 'vue2 app', // app name registered
