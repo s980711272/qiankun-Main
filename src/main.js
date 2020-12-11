@@ -3,7 +3,7 @@ import App from './App.vue'
 import ElementUI from 'element-ui';
 import router from './router'
 import 'element-ui/lib/theme-chalk/index.css';
-import { registerMicroApps, start } from 'qiankun';
+import { registerMicroApps} from 'qiankun';
 import Vuex from 'vuex'
 import store from './store'
 
@@ -15,20 +15,20 @@ registerMicroApps([
   {
     name: 'vue app', // app name registered
     entry: '//localhost:8081',
-    container: '#vueApp',
+    container: '#vue',
     activeRule: '/vue',
     props:{
       id:'111'
     }
   },
   {
-    name: 'vue2 app', // app name registered
+    name: 'child app', // app name registered
     entry: '//localhost:8082',
     container: '#child',
-    activeRule: '/vue2',
+    activeRule: '/child',
   },
 ]);
-start();
+
 
 Vue.config.productionTip = false
 

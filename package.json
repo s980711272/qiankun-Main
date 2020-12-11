@@ -5,12 +5,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "npm-run-all --parallel start:*",
+    "start:main": "npm run serve",
+    "start:child": "cd ../child && npm run serve",
+    "start:son": "cd ../son && npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "qiankun": "^2.0.25",
+    "run-all": "^1.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.3",
     "vuex": "^3.5.1"
